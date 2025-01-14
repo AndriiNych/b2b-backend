@@ -1,3 +1,5 @@
+const COLLATION = 'utf8mb4_unicode_ci';
+
 const DATE_SHABLON = {
   DATE: {
     type: 'datetime' as const,
@@ -38,7 +40,7 @@ export const FIELDS = {
     scale: FIELDS_LENGTH.DECIMAL.SCALE,
     nullable: true,
     default: 0,
-    collation: 'utf8_general_ci',
+    collation: COLLATION,
   },
   NUMBER: {
     type: 'int' as const,
@@ -50,7 +52,7 @@ export const FIELDS = {
     precision: FIELDS_LENGTH.PERCENT.PRECISION,
     scale: FIELDS_LENGTH.PERCENT.SCALE,
     nullable: true,
-    collation: 'utf8_general_ci',
+    collation: COLLATION,
   },
   TEXT_ROW: {
     type: 'varchar' as const,
@@ -64,21 +66,21 @@ export const FIELDS = {
     length: FIELDS_LENGTH.PHONE,
     nullable: true,
     default: '',
-    collation: 'utf8_general_ci',
+    collation: COLLATION,
   },
   EMAIL: {
     type: 'varchar' as const,
     length: FIELDS_LENGTH.EMAIL,
     nullable: true,
     default: '',
-    collation: 'utf8_general_ci',
+    collation: COLLATION,
   },
   UUID: {
     type: 'varchar' as const,
     length: FIELDS_LENGTH.UUID,
     nullable: true,
     default: '',
-    collation: 'utf8_general_ci',
+    collation: COLLATION,
   },
   DATE: { ...DATE_SHABLON.DATE },
   DATE_UPDATE: { ...DATE_SHABLON.DATE_UPDATE },
